@@ -1,5 +1,5 @@
 import products from '../data/products';
-import './Products.css';
+import './Products.css';  // matches renamed file
 
 export default function Products() {
   return (
