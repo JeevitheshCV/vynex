@@ -1,5 +1,6 @@
 # Node.js
 node_modules/
+leather_website/node_modules
 npm-debug.log
 
 # IDE / Editor folders
