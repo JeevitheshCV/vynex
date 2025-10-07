@@ -1,0 +1,137 @@
+/* ==========================================================
+   SUSTAINABILITY PAGE STYLES — VYNEX
+   ========================================================== */
+
+.page-hero {
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.page-hero p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.sustainability-section {
+  background: #fff;
+}
+
+.sustainability-section.alt-bg {
+  background: #f9f9f9;
+}
+
+.sustainability-section h2 {
+  color: #0b3b5a;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.sustainability-section p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.sustainability-section img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sustainability-section img:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- Certifications ---------- */
+.certification-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.certification-logos img {
+  width: 90px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.certification-logos img:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ---------- CTA ---------- */
+.sustainability-cta h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.sustainability-cta p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sustainability-cta .elementskit-btn {
+  background-color: #fff;
+  color: #0b3b5a;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sustainability-cta .elementskit-btn:hover {
+  background-color: #eaeaea;
+  transform: translateY(-2px);
+}
+
+/* ---------- Animation ---------- */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUpAnim 1s ease forwards;
+}
+
+@keyframes fadeInUpAnim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .sustainability-section .row {
+    flex-direction: column;
+  }
+
+  .sustainability-section img {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-hero h1 {
+    font-size: 32px;
+  }
+
+  .sustainability-cta h2 {
+    font-size: 24px;
+  }
+}

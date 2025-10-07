@@ -1,0 +1,181 @@
+/* ==========================================================
+   OUR SERVICES PAGE STYLES — VYNEX
+   ========================================================== */
+
+/* ---------- GENERAL LAYOUT ---------- */
+.page-hero {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 80px 0;
+}
+
+.page-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0b3b5a;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 18px;
+  color: #444;
+}
+
+/* ---------- INTRO SECTION ---------- */
+.services-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services-intro h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #0b3b5a;
+}
+
+.services-intro p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ---------- SERVICE GRID ---------- */
+.service-highlights .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-highlights .col-lg-4 {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-highlights .col-lg-4:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-highlights h3 {
+  font-size: 22px;
+  color: #0b3b5a;
+  margin-bottom: 10px;
+}
+
+.service-highlights p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ---------- DETAILED SECTIONS ---------- */
+.services-detailed .row {
+  margin-bottom: 60px;
+}
+
+.services-detailed h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #0b3b5a;
+}
+
+.services-detailed p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.services-detailed img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- CALL TO ACTION ---------- */
+.services-cta {
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.services-cta h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.services-cta p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.services-cta .elementskit-btn {
+  background-color: #0b3b5a;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.services-cta .elementskit-btn:hover {
+  background-color: #082f47;
+  transform: translateY(-2px);
+}
+
+/* ---------- ANIMATION CLASSES ---------- */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUpAnim 1s ease forwards;
+}
+
+.fadeInUp.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fadeInUp.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUpAnim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+  .service-highlights .col-lg-4 {
+    width: 100%;
+  }
+
+  .services-detailed .row {
+    flex-direction: column;
+  }
+
+  .services-detailed .row img {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-hero h1 {
+    font-size: 32px;
+  }
+
+  .services-intro h2 {
+    font-size: 26px;
+  }
+
+  .services-cta h2 {
+    font-size: 24px;
+  }
+}

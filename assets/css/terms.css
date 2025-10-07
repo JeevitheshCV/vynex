@@ -1,0 +1,97 @@
+/* ==========================================================
+   TERMS OF SERVICE PAGE — VYNEX
+   ========================================================== */
+
+.page-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+  color: #fff;
+}
+
+.page-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 59, 90, 0.55);
+}
+
+.page-hero h1 {
+  position: relative;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.page-hero p {
+  position: relative;
+  font-size: 18px;
+}
+
+/* ---------- Terms Content ---------- */
+.terms-content {
+  background: #fff;
+  padding: 80px 0;
+  color: #333;
+  line-height: 1.7;
+}
+
+.terms-content .container {
+  max-width: 900px;
+}
+
+.terms-content h2 {
+  color: #0b3b5a;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.terms-content p,
+.terms-content ul {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.terms-content ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.terms-content a {
+  color: #0b3b5a;
+  text-decoration: underline;
+}
+
+.terms-content .effective-date {
+  background: #f4f4f4;
+  padding: 15px 20px;
+  border-left: 4px solid #0b3b5a;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+/* ---------- Animation ---------- */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUpAnim 1s ease forwards;
+}
+
+@keyframes fadeInUpAnim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 32px;
+  }
+
+  .terms-content h2 {
+    font-size: 20px;
+  }
+}

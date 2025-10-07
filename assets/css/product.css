@@ -1,0 +1,125 @@
+.page-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+  color: #fff;
+}
+.page-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 59, 90, 0.55);
+}
+.page-hero h1 {
+  position: relative;
+  font-size: 42px;
+  font-weight: 700;
+}
+.page-hero p {
+  position: relative;
+  font-size: 18px;
+}
+
+/* Product Catalog */
+.product-catalog {
+  padding: 80px 0;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.product-card h3 {
+  color: #0b3b5a;
+  margin: 15px 0 5px;
+}
+.product-card p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  animation: fadeInUp 0.4s ease;
+}
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.modal-content h2 {
+  color: #0b3b5a;
+  margin-bottom: 15px;
+}
+.modal-content p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.modal-content .elementskit-btn {
+  background-color: #0b3b5a;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.modal-content .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
