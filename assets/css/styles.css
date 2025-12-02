@@ -837,3 +837,29 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 90%;
   }
 }
+/* Rotating Headline */
+.rotating-headline {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.rotating-word {
+  display: inline-block;
+  margin-left: 0.3em;
+  color: #FFD700;
+  min-width: 160px;
+  animation: rotateWords 2.5s ease-in-out forwards;
+}
+
+@keyframes rotateWords {
+  0%   { transform: translateY(100%); opacity: 0; }
+  15%  { transform: translateY(0); opacity: 1; }
+  85%  { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100%); opacity: 0; }
+}
+
+
+
+/* Rotating Headline end*/

@@ -142,7 +142,7 @@
       <div class="navbar">
         <div class="container nav-container">
           <!-- Logo -->
-          <a href="#home" class="logo">
+          <a href="index.html" class="logo">
             <img
               src="assets/images/logo.jpg"
               alt="VYNEX Logo"
@@ -153,34 +153,61 @@
           <!-- Navigation Menu -->
           <nav class="nav-menu">
             <ul>
-              <li><a href="#home" class="active">Home</a></li>
+              <li><a href="index.html" class="active">Home</a></li>
+
               <li class="menu-item-has-children">
-                <a href="vynex-about-us.html">About Us</a>
+                <a href="about.html">About</a>
                 <ul class="sub-menu">
-                  <li><a href="facilities.html">Facilities</a></li>
-                  <li><a href="our-services.html">Our Services</a></li>
+                  <li><a href="company-profile.html">Company Profile</a></li>
+                  <li><a href="mission.html">Mission</a></li>
+                  <li><a href="vision.html">Vision</a></li>
                 </ul>
               </li>
+
               <li class="menu-item-has-children">
                 <a href="products.html">Products</a>
                 <ul class="sub-menu">
                   <li><a href="handicrafts.html">Handicrafts</a></li>
-                  <li><a href="leather.html">Leather Products</a></li>
+                  <li><a href="leather-goods.html">Leather Goods</a></li>
                   <li><a href="imitation-jewellery.html">Imitation Jewellery</a></li>
                   <li><a href="spices.html">Spices</a></li>
-                  <li><a href="tea-coffee.html">Tea & Coffee</a></li>
+                  <li><a href="tea-coffee.html">Tea and Coffee</a></li>
                   <li><a href="agricultural-products.html">Agricultural Products</a></li>
                 </ul>
               </li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="sustainability.html">Sustainability</a></li>
+
+              <li class="menu-item-has-children">
+                <a href="services.html">Services</a>
+                <ul class="sub-menu">
+                  <li><a href="sourcing.html">Sourcing</a></li>
+                  <li><a href="packaging.html">Packaging</a></li>
+                  <li><a href="logistics.html">Logistics</a></li>
+                </ul>
+              </li>
+
+              <li class="menu-item-has-children">
+                <a href="sustainability.html">Sustainability</a>
+                <ul class="sub-menu">
+                  <li><a href="ethical-sourcing.html">Ethical Sourcing</a></li>
+                  <li><a href="responsible-practices.html">Responsible Practices</a></li>
+                </ul>
+              </li>
+
+              <li class="menu-item-has-children">
+                <a href="compliance.html">Compliance</a>
+                <ul class="sub-menu">
+                  <li><a href="certifications.html">Certifications</a></li>
+                  <li><a href="regulations.html">Regulations</a></li>
+                </ul>
+              </li>
+
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
 
           <!-- CTA Button -->
           <div class="nav-cta">
-            <a href="#contact" class="btn btn-primary">Get a Quote</a>
+            <a href="contact.html" class="btn btn-primary">Get a Quote</a>
           </div>
 
           <!-- Mobile Menu Toggle -->
@@ -189,6 +216,9 @@
           </div>
         </div>
       </div>
+
+
+
     </header>
     <!-- ======= End Header & Navigation ======= -->
 
@@ -202,39 +232,19 @@
         >
           <div class="overlay"></div>
           <div class="hero-content container">
-            <h1 class="hero-title">
-              Quality Beyond Borders - Exporting India’s Excellence Worldwide
-            </h1>
-            <p class="hero-tagline">[Your tagline goes here — update later]</p>
-            <div class="hero-buttons">
-              <a href="#products" class="elementskit-btn whitespace--normal"
-                >Explore Products</a
-              >
-              <a
-                href="contact.html"
-                class="elementskit-btn whitespace--normal btn-secondary"
-                >Get a Quote</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <!-- Additional slides (optional) -->
-        <!--
-        <div class="slide" style="background-image: url('assets/images/banner_2.png');">
-          <div class="overlay"></div>
-          <div class="hero-content container">
-            <h1 class="hero-title">Your Next Slide Headline</h1>
-            <p class="hero-tagline">Your tagline text here</p>
+          <h1 class="hero-title rotating-headline">
+            We Provide Exports For <span class="rotating-word">Handicrafts</span>
+          </h1>
+            <p class="hero-tagline">Delivering India’s best — globally, reliably, responsibly.</p>
             <div class="hero-buttons">
               <a href="#products" class="elementskit-btn whitespace--normal">Explore Products</a>
               <a href="contact.html" class="elementskit-btn whitespace--normal btn-secondary">Get a Quote</a>
             </div>
           </div>
         </div>
-        -->
       </div>
     </section>
+
     <!-- ======= End Hero Section ======= -->
 
 	<!-- ======= Why Choose VYNEX Section ======= -->
@@ -527,6 +537,35 @@
 	const menu = document.querySelector('.nav-menu');
 	toggle.addEventListener('click', () => menu.classList.toggle('active'));
 	</script>
+  <script>
+    const rotatingWords = [
+      "Handicrafts",
+      "Leather Goods",
+      "Spices",
+      "Tea",
+      "Coffee",
+      "AgroProducts"
+    ];
+
+    let currentWordIndex = 0;
+    const rotatingEl = document.querySelector(".rotating-word");
+
+    function rotateNextWord() {
+      currentWordIndex = (currentWordIndex + 1) % rotatingWords.length;
+
+      // Reset animation
+      rotatingEl.classList.remove("rotating-word");
+      void rotatingEl.offsetWidth; // Trigger reflow
+      rotatingEl.classList.add("rotating-word");
+
+      rotatingEl.textContent = rotatingWords[currentWordIndex];
+    }
+
+    setInterval(rotateNextWord, 2500); // Match timing with CSS
+  </script>
+
+
+
 
   </body>
 </html>
