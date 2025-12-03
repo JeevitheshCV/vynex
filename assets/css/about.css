@@ -1,0 +1,48 @@
+/* ======= About Page Styles ======= */
+
+.inner-hero {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+/* .inner-hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+} */
+.inner-hero .container {
+  position: relative;
+  z-index: 1;
+}
+.inner-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.inner-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+/* Shared styling for sections */
+.about-section {
+  background-color: #fff;
+  color: #333;
+}
+.about-section.light-bg {
+  background-color: #f9f9f9;
+}
+.about-section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.about-section .tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--primary);
+}
