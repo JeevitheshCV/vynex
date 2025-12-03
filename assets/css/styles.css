@@ -115,18 +115,46 @@ h1, h2, h3, h4, h5, h6 {
 /* =========================
    BUTTONS (unified with Elementor mimic)
    ========================= */
-.btn,.elementskit-btn{
-  display:inline-block; padding:12px 30px; border-radius:4px;
-  font-weight:600; text-transform:uppercase; transition:all .3s ease;
+
+/* Base button styles */
+.btn,
+.elementskit-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
-.btn-primary,.elementskit-btn{background:var(--primary); color:var(--text-light);}
-.btn-primary:hover,.elementskit-btn:hover{background:var(--accent);}
-.btn-secondary,.elementskit-btn.btn-secondary{background:transparent; border:2px solid var(--primary); color:var(--primary);}
-.btn-secondary:hover,.elementskit-btn.btn-secondary:hover{background:var(--primary); color:var(--text-light);}
 
+/* Primary Button */
+.btn-primary,
+.elementskit-btn:not(.btn-secondary) {
+  background-color: #0b3b5a;   /* Your primary color */
+  color: #fff;
+  border: none;
+}
 
+.btn-primary:hover,
+.elementskit-btn:not(.btn-secondary):hover {
+  background-color: #003049;   /* Darker shade on hover */
+  color: #fff;
+}
 
+/* Secondary Button (outlined) */
+.btn-secondary,
+.elementskit-btn.btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
 
+.elementskit-btn.btn-secondary:hover {
+  background-color: #fff;
+  color: #0b3b5a;
+}
 
 
 /* =========================
@@ -179,6 +207,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   transform: translateY(-50%);
   padding: 0 15px;
+  
 }
 
 .hero-title {
@@ -436,9 +465,10 @@ h1, h2, h3, h4, h5, h6 {
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
   text-transform: uppercase;
   color: var(--primary);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .section-divider {
@@ -561,88 +591,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =========================
-   GLOBAL SOURCING & LOGISTICS
-   ========================= */
-.global-sourcing {
-  background-color: #fff;
-  padding: 80px 0;
+   Process Section
+   ========================= */ 
+
+.process-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
 }
 
-.sourcing-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.sourcing-image {
-  flex: 1 1 45%;
-}
-
-.sourcing-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.sourcing-text {
-  flex: 1 1 50%;
-}
-
-.sourcing-text p {
+.process-intro {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
   color: #555;
-  line-height: 1.6;
-  margin-bottom: 20px;
 }
 
-/* Responsive stacking */
-@media (max-width: 992px) {
-  .sourcing-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .sourcing-image img {
-    max-width: 90%;
-  }
+.process-steps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 
-/* =========================
-   SUSTAINABILITY DIVIDER SECTION
-   ========================= */
-.sustainability-divider {
-  background-color: var(--bg-light);           /* matches other divider backgrounds */
-  padding: 80px 0;
+.process-step {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  max-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
   text-align: center;
 }
 
-.sustainability-divider .section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--primary);
-  text-transform: uppercase;
+.process-step:hover {
+  transform: translateY(-6px);
+}
+
+.process-step i {
+  font-size: 2.5rem;
+  color: #0b3b5a;
+  margin-bottom: 15px;
+}
+
+.process-step h4 {
+  font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #222;
 }
 
-.sustainability-divider .section-divider {
-  width: 80px;
-  height: 3px;
-  background-color: var(--primary);
-  margin: 0 auto;
+.process-step p {
+  font-size: 0.95rem;
+  color: #555;
 }
 
-/* Subtle fade-in transition (handled by shared JS) */
-.sustainability-divider[data-animate] {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
 
-.sustainability-divider[data-animate].visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+
 /* =========================
    OUR EXPERTISE DIVIDER SECTION
    ========================= */
@@ -724,119 +727,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
   }
 }
-/* =========================
-   COMPLIANCE & CERTIFICATION
-   ========================= */
-.compliance-section {
-  background-color: #fff;
-  padding: 80px 0;
-}
 
-.compliance-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.compliance-image {
-  flex: 1 1 45%;
-}
-
-.compliance-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.compliance-text {
-  flex: 1 1 50%;
-}
-
-.compliance-text p {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .compliance-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .compliance-image img {
-    max-width: 90%;
-  }
-}
-/* =========================
-   GLOBAL PRESENCE / WORKING AREA
-   ========================= */
-.working-area {
-  background-color: var(--bg-light);
-  padding: 80px 0;
-}
-
-.working-container {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-
-/* Subsection 1: Image + Text */
-.working-block.image-text {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.working-image {
-  flex: 1 1 45%;
-}
-
-.working-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.working-text {
-  flex: 1 1 50%;
-}
-
-.working-text p {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Subsection 2: Text Only */
-.working-block.text-only {
-  text-align: center;
-}
-
-.working-block.text-only p {
-  max-width: 750px;
-  margin: 0 auto 20px;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .working-block.image-text {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .working-image img {
-    max-width: 90%;
-  }
-}
 /* Rotating Headline */
 .rotating-headline {
   font-size: 2.2rem;
@@ -847,12 +738,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .rotating-word {
   display: inline-block;
-  margin-left: 0.3em;
+  margin-left: 0.3em; /* Reduce spacing slightly */
   color: #FFD700;
   min-width: 160px;
   animation: rotateWords 2.5s ease-in-out forwards;
+  vertical-align: middle;
 }
-
 @keyframes rotateWords {
   0%   { transform: translateY(100%); opacity: 0; }
   15%  { transform: translateY(0); opacity: 1; }
