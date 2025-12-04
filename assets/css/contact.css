@@ -2,29 +2,39 @@
    CONTACT PAGE STYLES — VYNEX
    ========================================================== */
 
-.page-banner {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  padding: 120px 0;
-  color: #fff;
+/* ---------- Simplified Hero Section ---------- */
+.simple-hero {
+  background: #f5fafd; /* very light blue background */
+  padding: 100px 20px;
+  text-align: center;
 }
 
-.page-banner .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(11, 59, 90, 0.5);
-}
-
-.page-banner h1 {
-  position: relative;
+.simple-hero .hero-title {
   font-size: 42px;
+  color: #0b3b5a;
   font-weight: 700;
-  z-index: 1;
+  margin-bottom: 15px;
 }
+
+.simple-hero .hero-subtitle {
+  font-size: 18px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .simple-hero .hero-title {
+    font-size: 32px;
+  }
+
+  .simple-hero .hero-subtitle {
+    font-size: 16px;
+  }
+}
+
 
 /* ---------- Contact Section ---------- */
 .contact-section {

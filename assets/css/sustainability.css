@@ -1,137 +1,148 @@
-/* ==========================================================
-   SUSTAINABILITY PAGE STYLES — VYNEX
-   ========================================================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 
-.page-hero {
-  text-align: center;
+.inner-hero {
+  background: linear-gradient(135deg, #0b3b5a, #1e2a38);
   color: #fff;
+  text-align: center;
+  padding: 100px 20px;
 }
 
-.page-hero h1 {
-  font-size: 42px;
+.inner-title {
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.page-hero p {
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-.sustainability-section {
-  background: #fff;
-}
-
-.sustainability-section.alt-bg {
-  background: #f9f9f9;
-}
-
-.sustainability-section h2 {
-  color: #0b3b5a;
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-.sustainability-section p {
-  color: #555;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.sustainability-section img {
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.sustainability-section img:hover {
-  transform: scale(1.02);
-}
-
-/* ---------- Certifications ---------- */
-.certification-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.certification-logos img {
-  width: 90px;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-
-.certification-logos img:hover {
-  filter: none;
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-/* ---------- CTA ---------- */
-.sustainability-cta h2 {
-  font-size: 30px;
   margin-bottom: 10px;
 }
 
-.sustainability-cta p {
-  font-size: 18px;
-  margin-bottom: 25px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+.inner-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.sustainability-cta .elementskit-btn {
-  background-color: #fff;
+/* Wrapper */
+.sustainability-wrapper {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* Sections */
+.sustainability-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 80px;
+  padding: 60px 40px;
+  background: #f4f9fc;
+  border-radius: 10px;
+  scroll-margin-top: 120px;
+  transition: transform 0.4s ease;
+}
+
+.sustainability-section:hover {
+  transform: translateY(-6px);
+}
+
+.section-icon img {
+  width: 80px;
+  height: auto;
+}
+
+.section-content h2 {
+  font-size: 28px;
   color: #0b3b5a;
-  padding: 12px 30px;
-  font-weight: 600;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  margin-bottom: 15px;
 }
 
-.sustainability-cta .elementskit-btn:hover {
-  background-color: #eaeaea;
-  transform: translateY(-2px);
+.section-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-/* ---------- Animation ---------- */
-.fadeInUp {
+.section-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section-content ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 24px;
+  color: #222;
+}
+
+.section-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0b3b5a;
+}
+
+/* Certifications */
+.certifications-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(145deg, #eef5f9, #ffffff);
+  border-radius: 12px;
+}
+
+.certifications-section h2 {
+  font-size: 2rem;
+  color: #0b3b5a;
+  margin-bottom: 40px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.cert-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUpAnim 1s ease forwards;
+  transform: translateY(30px);
 }
 
-@keyframes fadeInUpAnim {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.cert-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 992px) {
-  .sustainability-section .row {
+.cert-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  font-size: 14px;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sustainability-section {
     flex-direction: column;
+    text-align: center;
   }
 
-  .sustainability-section img {
-    margin-top: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  .page-hero h1 {
-    font-size: 32px;
+  .section-icon {
+    margin-bottom: 20px;
   }
 
-  .sustainability-cta h2 {
-    font-size: 24px;
+  .section-icon img {
+    width: 60px;
   }
 }

@@ -1,0 +1,115 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.inner-hero {
+  background: linear-gradient(to right, #0b3b5a, #1e2a38);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.inner-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.inner-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.compliance-wrapper {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.compliance-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  padding: 40px;
+  background: #f8fcfe;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.compliance-block:hover {
+  transform: translateY(-5px);
+}
+
+.compliance-icon {
+  flex: 0 0 80px;
+  margin-right: 30px;
+}
+
+.compliance-icon img {
+  width: 60px;
+  height: auto;
+}
+
+.compliance-content h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #0b3b5a;
+}
+
+.compliance-content p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.compliance-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.compliance-content ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.compliance-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0b3b5a;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .compliance-block {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .compliance-icon {
+    margin-bottom: 20px;
+  }
+}

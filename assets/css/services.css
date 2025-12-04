@@ -1,173 +1,221 @@
-/* ==========================================================
-   SERVICES PAGE STYLES — VYNEX
-   ========================================================== */
-
-/* ---------- HERO ---------- */
-.page-hero {
-  text-align: center;
-  background-color: #f4f4f4;
-  padding: 80px 0;
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
-.page-hero h1 {
-  font-size: 42px;
-  color: #0b3b5a;
-  margin-bottom: 10px;
+/* Hero Section */
+.inner-hero {
+  background: linear-gradient(135deg, #0b3b5a, #1e2a38);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.inner-title {
+  font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.page-hero p {
-  color: #444;
-  font-size: 18px;
-}
-
-/* ---------- OVERVIEW ---------- */
-.services-overview {
-  max-width: 900px;
+.inner-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 800px;
   margin: 0 auto;
+}
+
+/* Why Choose Section */
+.why-choose {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #0b3b5a;
+  margin: 0 auto 30px auto;
+}
+
+.why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.why-item {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
-.services-overview h2 {
+.why-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.why-item i {
   color: #0b3b5a;
-  font-size: 30px;
   margin-bottom: 15px;
 }
 
-.services-overview p {
-  color: #555;
-  font-size: 16px;
-  line-height: 1.7;
+.why-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-/* ---------- GRID ---------- */
-.services-grid .col-lg-4 {
+.why-item p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Services Section */
+.services-wrapper {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.service-block {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
   background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.04);
+  margin-bottom: 60px;
+  padding: 40px;
+  scroll-margin-top: 120px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.services-grid .col-lg-4:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+.service-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
-.services-grid h3 {
-  font-size: 22px;
+.service-icon {
+  font-size: 40px;
   color: #0b3b5a;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-right: 30px;
+  min-width: 60px;
 }
 
-.services-grid p {
-  font-size: 15px;
-  color: #555;
+.service-content {
+  flex: 1;
+}
+
+.service-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #0b3b5a;
+}
+
+.service-content p {
+  margin-bottom: 15px;
   line-height: 1.6;
+  color: #444;
 }
 
-/* ---------- LOGISTICS & QUALITY ---------- */
-.services-logistics h2,
-.services-quality h2 {
-  font-size: 28px;
-  color: #0b3b5a;
-  margin-bottom: 10px;
+.service-content ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.services-logistics p,
-.services-quality p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.7;
-}
-
-.services-logistics img,
-.services-quality img {
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-}
-
-/* ---------- CTA ---------- */
-.services-cta {
+.service-content ul li {
   position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.service-content ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #0b3b5a;
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+
+/* CTA Section */
+.enquire-now {
+  padding: 80px 20px;
+  background-color: #0b3b5a;
   color: #fff;
   text-align: center;
 }
 
-.services-cta h2 {
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.services-cta p {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-
-.services-cta .elementskit-btn {
-  background-color: #0b3b5a;
+.enquire-now .section-title {
   color: #fff;
-  padding: 12px 28px;
-  border-radius: 4px;
+}
+
+.enquire-now .enquire-text {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 20px auto 30px auto;
+  color: #e0e0e0;
+}
+
+.enquire-now .elementskit-btn {
+  background: #fff;
+  color: #0b3b5a;
   font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.services-cta .elementskit-btn:hover {
-  background-color: #082f47;
-  transform: translateY(-2px);
+.enquire-now .elementskit-btn:hover {
+  background: #e4e4e4;
 }
 
-/* ---------- ANIMATION ---------- */
-.fadeInUp {
+/* Animation (Fade In Up) */
+[data-animate="fade-in-up"] {
   opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUpAnim 1s ease forwards;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
 }
 
-.fadeInUp.delay-1 {
-  animation-delay: 0.3s;
+[data-animate="fade-in-up"].visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.fadeInUp.delay-2 {
-  animation-delay: 0.6s;
-}
-
-@keyframes fadeInUpAnim {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 992px) {
-  .services-grid .col-lg-4 {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .services-logistics .row,
-  .services-quality .row {
+/* Responsive */
+@media (max-width: 768px) {
+  .why-grid {
     flex-direction: column;
+    align-items: center;
   }
 
-  .services-logistics img,
-  .services-quality img {
+  .service-block {
+    flex-direction: column;
+    text-align: left;
+    padding: 30px;
+  }
+
+  .service-icon {
     margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .page-hero h1 {
-    font-size: 32px;
-  }
-
-  .services-cta h2 {
-    font-size: 24px;
   }
 }

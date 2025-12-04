@@ -1,0 +1,173 @@
+/* ==========================================================
+   SERVICES PAGE STYLES — VYNEX
+   ========================================================== */
+
+/* ---------- HERO ---------- */
+.page-hero {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 80px 0;
+}
+
+.page-hero h1 {
+  font-size: 42px;
+  color: #0b3b5a;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.page-hero p {
+  color: #444;
+  font-size: 18px;
+}
+
+/* ---------- OVERVIEW ---------- */
+.services-overview {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-overview h2 {
+  color: #0b3b5a;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.services-overview p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ---------- GRID ---------- */
+.services-grid .col-lg-4 {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-grid .col-lg-4:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.services-grid h3 {
+  font-size: 22px;
+  color: #0b3b5a;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.services-grid p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ---------- LOGISTICS & QUALITY ---------- */
+.services-logistics h2,
+.services-quality h2 {
+  font-size: 28px;
+  color: #0b3b5a;
+  margin-bottom: 10px;
+}
+
+.services-logistics p,
+.services-quality p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.services-logistics img,
+.services-quality img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- CTA ---------- */
+.services-cta {
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.services-cta h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.services-cta p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.services-cta .elementskit-btn {
+  background-color: #0b3b5a;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.services-cta .elementskit-btn:hover {
+  background-color: #082f47;
+  transform: translateY(-2px);
+}
+
+/* ---------- ANIMATION ---------- */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUpAnim 1s ease forwards;
+}
+
+.fadeInUp.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fadeInUp.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUpAnim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+  .services-grid .col-lg-4 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .services-logistics .row,
+  .services-quality .row {
+    flex-direction: column;
+  }
+
+  .services-logistics img,
+  .services-quality img {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-hero h1 {
+    font-size: 32px;
+  }
+
+  .services-cta h2 {
+    font-size: 24px;
+  }
+}
