@@ -12,8 +12,8 @@ Thumbs.db
 .DS_Store
 
 # Image files
-/assets/images/*.jpg
-/assets/images/*.png
+# /assets/images/*.jpg
+# /assets/images/*.png
 
 # OS-specific files
 Desktop.ini
