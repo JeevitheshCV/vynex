@@ -57,3 +57,129 @@
 }
 
 /* WhatsApp widget inherits global widget CSS */
+/* Floating WhatsApp widget (Option B-style) */
+
+.wa-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  font-family: inherit;
+}
+
+.wa-widget__button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.wa-widget__button i {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.wa-widget__panel {
+  position: absolute;
+  bottom: 72px;
+  right: 0;
+  width: 320px;
+  max-width: 90vw;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+}
+
+.wa-widget.wa-widget--open .wa-widget__panel {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.wa-widget__panel-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background: #075e54;
+  color: #ffffff;
+  border-radius: 12px 12px 0 0;
+}
+
+.wa-widget__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.wa-widget__avatar i {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.wa-widget__titles {
+  flex: 1;
+}
+
+.wa-widget__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.wa-widget__subtitle {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.wa-widget__close {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.wa-widget__panel-body {
+  padding: 12px 12px 14px;
+}
+
+.wa-widget__message {
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.wa-widget__cta {
+  display: inline-block;
+  padding: 7px 16px;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.wa-widget__cta:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  .wa-widget {
+    right: 16px;
+    bottom: 16px;
+  }
+}
