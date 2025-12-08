@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WA Widget Test</title>
+
+<link rel="stylesheet" href="test.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body style="height:2000px;">
+
+<h2>Scroll down and click the button</h2>
+
+<!-- WIDGET -->
+<div id="wa-widget"
+     class="wa-widget"
+     data-phone="917289010100"
+     data-message="Hello, I need assistance.">
+
+    <div class="wa-widget__button">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <div class="wa-widget__panel">
+        <div class="wa-widget__panel-header">
+            <div class="wa-widget__avatar">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="wa-widget__titles">
+                <div class="wa-widget__title">WhatsApp Chat</div>
+                <div class="wa-widget__subtitle">Typically replies in a few minutes.</div>
+            </div>
+            <button type="button" class="wa-widget__close">&times;</button>
+        </div>
+
+        <div class="wa-widget__panel-body">
+            <p class="wa-widget__message">
+                Welcome to VYNEX. Send us a message on WhatsApp for quick support.
+            </p>
+            <a class="wa-widget__cta" href="#" target="_blank">Open WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+<script src="test.js"></script>
+</body>
+</html>
