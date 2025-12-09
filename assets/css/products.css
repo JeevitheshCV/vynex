@@ -3,7 +3,7 @@ body {
 }
 
 /* HERO */
-.product-hero {
+/* .product-hero {
   background: linear-gradient(rgba(11, 59, 90, 0.65), rgba(11, 59, 90, 0.65)),
     url("../images/products-hero.jpg") center/cover no-repeat;
   padding: 140px 20px;
@@ -23,6 +23,36 @@ body {
   margin-top: 40px;
   font-size: 28px;
   opacity: 0.8;
+} */
+
+/* ======= About Page Styles ======= */
+
+.inner-hero {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+/* .inner-hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+} */
+.inner-hero .container {
+  position: relative;
+  z-index: 1;
+}
+.inner-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.inner-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 
 /* PRODUCT GRID */
